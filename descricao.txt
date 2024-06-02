@@ -1,0 +1,46 @@
+class biblioteca{
+    objetos:
+    livro livros
+    Pessoa cliente
+    
+
+    class emprestimo(){
+    Pessoa cliente
+    livro livros
+
+    datasaida
+
+    printar data de devolucao
+
+    }
+
+        funcao devolucao{
+        bool se dentro do prazo ou nao
+        caso sim: entrada no sistema
+        caso nao: multa e entrada no sistema
+
+        entrada no sistema
+    }
+
+    funcao relatorio() {
+        relatorio estoque OU
+        relatorio de emprestimos
+    }
+}
+
+
+class livro{
+    genero
+    titulo
+    autor
+    classificacao
+
+}
+
+class Pessoa{
+    nome 
+    idade(se idade<12 chamar responsavel para cadastro)
+    endereco
+    cpf(validacao cpf)
+
+}
