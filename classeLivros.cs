@@ -19,6 +19,19 @@ class classeLivros
     public string Genero{
         get{ return genero; }
         set{ genero = value;}   
+                /*public enum Genero{  temos q definir esses generos
+            Romance,
+            Acao,
+            Terror,
+            Ficcao Cientifica,
+            Fantasia,   
+            Suspense,
+            Drama,
+            Educacionais,
+            Biografias,
+                
+        
+        }*/
     }
 
     public int ClassificacaoIndicativa{
