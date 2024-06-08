@@ -1,15 +1,32 @@
-﻿using System;
+﻿
+
+using System;
+
+
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        Console.WriteLine("");
+        // Criando uma instância de livro
+        Livro livro = new Livro();
+        livro.Titulo = "Dom Quixote";
+        livro.Autor = "Miguel de Cervantes";
+        livro.Genero = "Romance";
+        livro.ClassificacaoIndicativa = 16; // Testando a classificação indicativa
 
-        //so para testar
-        //Pessoa eu = new Pessoa("eu", "ali", 20, 03090098717 );
-        //Livro book = new Livro ("titulo", "eu msm", "romance", 14);
-        //Emprestimo e1 = new Emprestimo (book, eu);
+        // Criando uma instância de pessoa
+        Pessoa pessoa = new Pessoa();
+        pessoa.Nome = "João";
+        pessoa.Idade = 5;
+        pessoa.CPF = "161.776.997.58";
 
-        //e1.devolucaoLivro();
+        Console.WriteLine(pessoa.Idade);
+        // Criando uma instância de empréstimo
+        //Emprestimo emprestimo = new Emprestimo();
+        //emprestimo.EmprestimoLivro(livro, pessoa);
+
+        // Simulando a devolução do livro
+        //emprestimo.DevolucaoLivro();
+        Console.ReadLine();
     }
 }

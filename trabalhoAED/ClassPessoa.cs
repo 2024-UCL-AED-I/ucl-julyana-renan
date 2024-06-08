@@ -25,10 +25,11 @@ public class Pessoa
         get { return idade; }
         set
         {
-            if (value > 0 && value < 120)
+            if (value > 5 && value < 120)
             {
                 idade = value;
             }
+           
         }
     }
 
@@ -43,10 +44,12 @@ public class Pessoa
             }
             else
             {
-                console.WriteLine("CPF inválido.");
+                Console.WriteLine("CPF inválido.");
             }
         }
     }
+
+    public string CPF { get; set; }
 
     private static bool ValidarCPF(string cpf)
     {
