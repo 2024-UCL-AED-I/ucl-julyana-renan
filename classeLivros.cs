@@ -1,11 +1,11 @@
-class classeLivros
+class Livro
 {
     private string titulo;
     private string autor;
     private string genero;
     private int classificacaoIndicativa;
 
-//Matheus é brabo
+
     public string Titulo{
         get{ return titulo; }
         set{titulo = value;}
@@ -19,19 +19,7 @@ class classeLivros
     public string Genero{
         get{ return genero; }
         set{ genero = value;}   
-                /*public enum Genero{  temos q definir esses generos
-            Romance,
-            Acao,
-            Terror,
-            Ficcao Cientifica,
-            Fantasia,   
-            Suspense,
-            Drama,
-            Educacionais,
-            Biografias,
-                
-        
-        }*/
+
     }
 
     public int ClassificacaoIndicativa{
@@ -45,7 +33,7 @@ class classeLivros
 
             classificacaoIndicativa = value;
             }
-            //....
+            
 
         }
     }
