@@ -1,0 +1,5 @@
+R:\Faculdade\ucl-julyana-renan\obj\Debug\net8.0\ucl-julyana-renan.GeneratedMSBuildEditorConfig.editorconfig
+R:\Faculdade\ucl-julyana-renan\obj\Debug\net8.0\ucl-julyana-renan.AssemblyInfoInputs.cache
+R:\Faculdade\ucl-julyana-renan\obj\Debug\net8.0\ucl-julyana-renan.AssemblyInfo.cs
+R:\Faculdade\ucl-julyana-renan\obj\Debug\net8.0\ucl-julyana-renan.csproj.CoreCompileInputs.cache
+R:\Faculdade\ucl-julyana-renan\obj\Debug\net8.0\ucl-julyana-renan.sourcelink.json
