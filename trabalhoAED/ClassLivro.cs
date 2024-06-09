@@ -40,4 +40,10 @@ class Livro
             }
         }
     }
-}
+
+    public override string ToString ()
+    {
+        return $" Titulo: {this.titulo}\n Autor: {this.Autor}.\n Genero: {this.Genero}.\n Classificacao indicativa: {this.classificacaoIndicativa} anos.\n";
+
+    }
+ }

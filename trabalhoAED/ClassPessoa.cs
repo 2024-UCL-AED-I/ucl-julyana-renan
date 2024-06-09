@@ -49,7 +49,15 @@ public class Pessoa
         }
     }
 
-    public string CPF { get; set; }
+    //imprime pessoa
+
+    public override string ToString()
+    {
+        return $" Nome: {this.nome}\n Idade: {this.idade} anos.\n CPF: {this.cpf}.\n Endereco: {this.endereco}.\n";
+
+    }
+
+    //public string CPF { get; set; }
 
     private static bool ValidarCPF(string cpf)
     {

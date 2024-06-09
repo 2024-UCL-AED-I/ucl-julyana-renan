@@ -12,15 +12,20 @@ class Program
         livro.Titulo = "Dom Quixote";
         livro.Autor = "Miguel de Cervantes";
         livro.Genero = "Romance";
-        livro.ClassificacaoIndicativa = 16; // Testando a classificação indicativa
+        livro.ClassificacaoIndicativa = 50; // Testando a classificação indicativa
 
         // Criando uma instância de pessoa
         Pessoa pessoa = new Pessoa();
         pessoa.Nome = "João";
-        pessoa.Idade = 5;
-        pessoa.CPF = "161.776.997.58";
+        pessoa.Idade = 21;
+        pessoa.Cpf = "161.776.997.58";
+        pessoa.Endereco = "Rua professor virginio pereirar n100";
 
-        Console.WriteLine(pessoa.Idade);
+        Console.WriteLine(livro);
+        Console.WriteLine("/////////////////////////////////");
+        Console.WriteLine(pessoa);
+
+
         // Criando uma instância de empréstimo
         //Emprestimo emprestimo = new Emprestimo();
         //emprestimo.EmprestimoLivro(livro, pessoa);
