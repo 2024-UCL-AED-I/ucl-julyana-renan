@@ -46,4 +46,25 @@ class Livro
         return $" Titulo: {this.titulo}\n Autor: {this.Autor}.\n Genero: {this.Genero}.\n Classificacao indicativa: {this.classificacaoIndicativa} anos.\n";
 
     }
+
+    public static void Cadastrarbooks(List<Livro> livrinho)
+    {
+        Livro novoLivro = new Livro();
+
+        Console.Clear();
+        Console.WriteLine("Cadastro de LIVROS:");
+        Console.Write("Titulo: ");
+        novoLivro.titulo = Console.ReadLine();
+
+        Console.Write("Autor: ");
+        novoLivro.Autor = Console.ReadLine();
+
+        Console.Write("Genero: ");
+        novoLivro.Genero = Console.ReadLine();
+
+        Console.Write("Classificacao indicativa: ");
+        novoLivro.ClassificacaoIndicativa = int.Parse(Console.ReadLine());
+
+        livrinho.Add(novoLivro);
+    }
  }
