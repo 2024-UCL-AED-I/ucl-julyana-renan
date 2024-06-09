@@ -26,12 +26,12 @@ class Program
         Console.WriteLine(pessoa);
 
 
-        // Criando uma instância de empréstimo
-        //Emprestimo emprestimo = new Emprestimo();
-        //emprestimo.EmprestimoLivro(livro, pessoa);
+        //Criando uma instância de empréstimo
+        Emprestimo emprestimo = new Emprestimo();
+        emprestimo.EmprestimoLivro(livro, pessoa);
 
         // Simulando a devolução do livro
-        //emprestimo.DevolucaoLivro();
+        emprestimo.DevolucaoLivro(pessoa);
         Console.ReadLine();
     }
 }
