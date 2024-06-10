@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
+//precisa ter pesquisa de emprestimo?
+
 class Emprestimo
 {
     private Livro livro;
@@ -14,12 +16,6 @@ class Emprestimo
     public void EmprestimoLivro(Livro livro, Pessoa cliente)
     {
         string filePath = "Emprestimo.txt";
-
-        // Verificar se o arquivo existe, caso contrário, criar um novo
-        if (!File.Exists(filePath))
-        {
-            using (FileStream fs = File.Create(filePath)) { }
-        }
 
         // Verificar se o cliente já tem um livro alugado
         bool clienteJaTemLivro = false;
