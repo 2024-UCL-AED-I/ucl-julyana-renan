@@ -6,14 +6,10 @@ using System.Collections.Generic;
 
 class Program
 {
+
     static void Main(string[] args)
     {
 
-        //List<Livro> books = new List<Livro>();
-
-        //Livro livro = new Livro();
-
-        //Cadastrarbooks(books);
 
         List<Livro> livros = new List<Livro>();
         List<Pessoa> clientes = new List<Pessoa>();
@@ -52,10 +48,6 @@ class Program
                         pessoa.Idade = int.Parse(Console.ReadLine());
                         Console.WriteLine("Informe o CPF do cliente:");
                         pessoa.Cpf = Console.ReadLine();
-                        if (pessoa.ValidarCPF() == false)
-                    {
-                        break;
-                    }
                         clientes.Add(pessoa);
                         Console.WriteLine("\nCliente Cadastrado! Pressione qualquer tecla para continuar.");
                         Console.ReadKey();
