@@ -48,7 +48,9 @@ class Emprestimo
             dataEmprestimo = DateTime.Now;
             dataDevolucao = dataEmprestimo.AddDays(14); // Considerando 14 dias para um empréstimo
 
-            sw.WriteLine($"{cliente.Nome};{cliente.Endereco};{cliente.Idade};{cliente.Cpf};{livro.Titulo};{livro.Autor};{livro.Genero};{livro.ClassificacaoIndicativa};{dataEmprestimo};{dataDevolucao}");
+            string linha = ($"{cliente.Nome};{cliente.Endereco};{cliente.Idade};{cliente.Cpf};{livro.Titulo};{livro.Autor};{livro.Genero};{livro.ClassificacaoIndicativa};{dataEmprestimo};{dataDevolucao}");
+            string caminhoArquivo = "R:\\Faculdade\\trabalhoAED\\trabalhoAED\\Emprestimo.txt";
+            File.AppendAllText(caminhoArquivo, linha + Environment.NewLine);
         }
 
         Console.WriteLine($"Empréstimo adicionado com sucesso. O livro deve ser devolvido em {dataDevolucao}");

@@ -47,6 +47,28 @@ class Livro
 
     }
 
+
+    public static void EscreverEmArquivo(Livro livro)
+    {
+        try
+        {
+            string linha = $"{livro.titulo};{livro.autor};{livro.genero};{livro.classificacaoIndicativa}";
+            string caminhoArquivo = "R:\\Faculdade\\trabalhoAED\\trabalhoAED\\Livros.txt";
+
+            // Verificar se o arquivo já existe e informar o caminho absoluto
+            string caminhoAbsoluto = Path.GetFullPath(caminhoArquivo);
+            Console.WriteLine($"Escrevendo no arquivo: {caminhoAbsoluto}");
+
+            // Adiciona a linha ao arquivo
+            File.AppendAllText(caminhoArquivo, linha + Environment.NewLine);
+            Console.WriteLine("Dados do livro escritos com sucesso.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao escrever no arquivo: {ex.Message}");
+        }
+    }
+
     public static void Cadastrarbooks(List<Livro> livrinho)
     {
         Livro novoLivro = new Livro();
@@ -68,3 +90,4 @@ class Livro
         livrinho.Add(novoLivro);
     }
  }
+

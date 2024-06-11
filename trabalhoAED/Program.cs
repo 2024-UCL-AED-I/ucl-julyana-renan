@@ -49,6 +49,7 @@ class Program
                         Console.WriteLine("Informe o CPF do cliente:");
                         pessoa.Cpf = Console.ReadLine();
                         clientes.Add(pessoa);
+                        Pessoa.EscreverEmArquivo(pessoa);
                         Console.WriteLine("\nCliente Cadastrado! Pressione qualquer tecla para continuar.");
                         Console.ReadKey();
                         break;
@@ -64,6 +65,8 @@ class Program
                         Console.WriteLine("Informe a Classificacao Indicativa do livro:");
                         livro.ClassificacaoIndicativa = int.Parse(Console.ReadLine());
                         livros.Add(livro);
+                        Livro.EscreverEmArquivo(livro);
+
                         Console.WriteLine("\nLivro Cadastrado! Pressione qualquer teclar continuar.");
                         Console.ReadKey();
                         break;

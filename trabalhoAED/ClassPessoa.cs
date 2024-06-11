@@ -56,6 +56,29 @@ public class Pessoa
         return $" Nome: {this.nome}\n Idade: {this.idade} anos.\n CPF: {this.cpf}.\n Endereco: {this.endereco}.\n";
 
     }
+    //escreve no arquivo
+
+    public static void EscreverEmArquivo(Pessoa pessoa)
+    {
+        try
+        {
+            string linha = $"{pessoa.nome};{pessoa.idade};{pessoa.cpf};{pessoa.endereco}";
+            string caminhoArquivo = "R:\\Faculdade\\trabalhoAED\\trabalhoAED\\Clientes.txt";
+
+            // Verificar se o arquivo já existe e informar o caminho absoluto
+            string caminhoAbsoluto = Path.GetFullPath(caminhoArquivo);
+            Console.WriteLine($"Escrevendo no arquivo: {caminhoAbsoluto}");
+
+            // Adiciona a linha ao arquivo
+            File.AppendAllText(caminhoArquivo, linha + Environment.NewLine);
+            Console.WriteLine("Dados escritos com sucesso.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao escrever no arquivo: {ex.Message}");
+        }
+    }
+
 
     //public string CPF { get; set; }
 
