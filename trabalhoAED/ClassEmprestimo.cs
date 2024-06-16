@@ -15,7 +15,7 @@ class Emprestimo
 
     public void EmprestimoLivro(Livro livro, Pessoa cliente)
     {
-        string filePath = "Emprestimo.txt";
+        string filePath = "..\\..\\..\\bancoDeDados\\Emprestimo.txt";
 
         // Verificar se o cliente já tem um livro alugado
         bool clienteJaTemLivro = false;
@@ -49,7 +49,7 @@ class Emprestimo
             dataDevolucao = dataEmprestimo.AddDays(14); // Considerando 14 dias para um empréstimo
 
             string linha = ($"{cliente.Nome};{cliente.Endereco};{cliente.Idade};{cliente.Cpf};{livro.Titulo};{livro.Autor};{livro.Genero};{livro.ClassificacaoIndicativa};{dataEmprestimo};{dataDevolucao}");
-            string caminhoArquivo = "R:\\Faculdade\\trabalhoAED\\trabalhoAED\\Emprestimo.txt";
+            string caminhoArquivo = "..\\..\\..\\bancoDeDados\\Emprestimo.txt";
             File.AppendAllText(caminhoArquivo, linha + Environment.NewLine);
         }
 
@@ -58,7 +58,7 @@ class Emprestimo
 
     public void DevolucaoLivro(Pessoa pessoa)
     {
-        string filePath = "Emprestimo.txt";
+        string filePath = "..\\..\\..\\bancoDeDados\\Emprestimo.txt";
         bool livroDevolvido = false;
 
         // Ler todas as linhas do arquivo e armazená-las em uma lista
