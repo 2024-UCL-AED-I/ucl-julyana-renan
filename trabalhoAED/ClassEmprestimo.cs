@@ -1,10 +1,6 @@
-﻿using System;
-using System.Security.Cryptography;
-using System.Collections.Generic;
+using System;
 using System.IO;
 using System.Text;
-
-//precisa ter pesquisa de emprestimo?
 
 class Emprestimo
 {
@@ -15,21 +11,78 @@ class Emprestimo
 
     public void EmprestimoLivro(Livro livro, Pessoa cliente)
     {
+<<<<<<< HEAD
+        string emprestimoPath = "..\\..\\..\\bancoDeDados\\Emprestimo.txt";
+        string clientePath = ( "..\\..\\..\\bancoDeDados\\Clientes.txt");
+        string livroPath = "..\\..\\..\\bancoDeDados\\Livros.txt";
+
+        // Verificar se o cliente está registrado
+        bool clienteRegistrado = false;
+        using (StreamReader sr = new StreamReader(clientePath, Encoding.UTF8))
+        {        
+            while (!sr.EndOfStream)
+            {
+                string linha = sr.ReadLine();
+
+                string[] dados = linha.Split(';');
+
+                if (dados.Length > 3 && dados[2] == cliente.Cpf)
+                {
+                    clienteRegistrado = true;
+                    break;
+                }
+            }
+        }
+
+        if (!clienteRegistrado)
+        {
+            Console.WriteLine("Cliente não registrado. Empréstimo não permitido.");
+            return;
+        }
+
+        // Verificar se o livro está registrado
+        bool livroRegistrado = false;
+        using (StreamReader sr = new StreamReader(livroPath, Encoding.UTF8))
+        {
+            string linha;
+
+            while (!sr.EndOfStream)
+            {
+                linha = sr.ReadLine();
+                
+                string[] dados = linha.Split(';');
+                if (dados.Length > 0 && dados[0] == livro.Titulo)
+                {
+                    livroRegistrado = true;
+                    break;
+                }
+            }
+        }
+
+        if (!livroRegistrado)
+        {
+            Console.WriteLine("Livro não registrado. Empréstimo não permitido.");
+            return;
+        }
+=======
         string filePath = "..\\..\\..\\bancoDeDados\\Emprestimo.txt";
+>>>>>>> c64be6dd540939fab15cdae3d23093c0a34eb46f
 
         // Verificar se o cliente já tem um livro alugado
         bool clienteJaTemLivro = false;
-
-        using (StreamReader sr = new StreamReader(filePath, Encoding.UTF8))
+        if (File.Exists(emprestimoPath))
         {
-            string linha;
-            while ((linha = sr.ReadLine()) != null)
+            using (StreamReader sr = new StreamReader(emprestimoPath, Encoding.UTF8))
             {
-                string[] dados = linha.Split(';');
-                if (dados.Length > 3 && dados[3] == cliente.Cpf)
+                string linha;
+                while ((linha = sr.ReadLine()) != null)
                 {
-                    clienteJaTemLivro = true;
-                    break;
+                    string[] dados = linha.Split(';');
+                    if (dados.Length > 3 && dados[3] == cliente.Cpf)
+                    {
+                        clienteJaTemLivro = true;
+                        break;
+                    }
                 }
             }
         }
@@ -41,7 +94,7 @@ class Emprestimo
         }
 
         // Registrar o empréstimo
-        using (StreamWriter sw = new StreamWriter(filePath, true, Encoding.UTF8))
+        using (StreamWriter sw = new StreamWriter(emprestimoPath, true, Encoding.UTF8))
         {
             this.livro = livro;
             this.cliente = cliente;
@@ -49,12 +102,17 @@ class Emprestimo
             dataDevolucao = dataEmprestimo.AddDays(14); // Considerando 14 dias para um empréstimo
 
             string linha = ($"{cliente.Nome};{cliente.Endereco};{cliente.Idade};{cliente.Cpf};{livro.Titulo};{livro.Autor};{livro.Genero};{livro.ClassificacaoIndicativa};{dataEmprestimo};{dataDevolucao}");
+<<<<<<< HEAD
+            sw.WriteLine(linha);
+=======
             string caminhoArquivo = "..\\..\\..\\bancoDeDados\\Emprestimo.txt";
             File.AppendAllText(caminhoArquivo, linha + Environment.NewLine);
+>>>>>>> c64be6dd540939fab15cdae3d23093c0a34eb46f
         }
 
         Console.WriteLine($"Empréstimo adicionado com sucesso. O livro deve ser devolvido em {dataDevolucao}");
     }
+
 
     public void DevolucaoLivro(Pessoa pessoa)
     {
