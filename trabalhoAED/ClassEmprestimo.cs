@@ -11,7 +11,7 @@ class Emprestimo
 
     public void EmprestimoLivro(Livro livro, Pessoa cliente)
     {
-<<<<<<< HEAD
+
         string emprestimoPath = "..\\..\\..\\bancoDeDados\\Emprestimo.txt";
         string clientePath = ( "..\\..\\..\\bancoDeDados\\Clientes.txt");
         string livroPath = "..\\..\\..\\bancoDeDados\\Livros.txt";
@@ -64,9 +64,9 @@ class Emprestimo
             Console.WriteLine("Livro não registrado. Empréstimo não permitido.");
             return;
         }
-=======
+
         string filePath = "..\\..\\..\\bancoDeDados\\Emprestimo.txt";
->>>>>>> c64be6dd540939fab15cdae3d23093c0a34eb46f
+
 
         // Verificar se o cliente já tem um livro alugado
         bool clienteJaTemLivro = false;
@@ -102,12 +102,11 @@ class Emprestimo
             dataDevolucao = dataEmprestimo.AddDays(14); // Considerando 14 dias para um empréstimo
 
             string linha = ($"{cliente.Nome};{cliente.Endereco};{cliente.Idade};{cliente.Cpf};{livro.Titulo};{livro.Autor};{livro.Genero};{livro.ClassificacaoIndicativa};{dataEmprestimo};{dataDevolucao}");
-<<<<<<< HEAD
+
             sw.WriteLine(linha);
-=======
+
             string caminhoArquivo = "..\\..\\..\\bancoDeDados\\Emprestimo.txt";
             File.AppendAllText(caminhoArquivo, linha + Environment.NewLine);
->>>>>>> c64be6dd540939fab15cdae3d23093c0a34eb46f
         }
 
         Console.WriteLine($"Empréstimo adicionado com sucesso. O livro deve ser devolvido em {dataDevolucao}");
