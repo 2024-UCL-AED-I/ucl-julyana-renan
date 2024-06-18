@@ -63,7 +63,7 @@ public class Pessoa
         try
         {
             string linha = $"{pessoa.nome};{pessoa.idade};{pessoa.cpf};{pessoa.endereco}";
-            string caminhoArquivo = "..\\..\\bancoDeDados\\Clientes.txt";
+            string caminhoArquivo = "..\\..\\..\\bancoDeDados\\Clientes.txt";
 
             // Verificar se o arquivo já existe e informar o caminho absoluto
             string caminhoAbsoluto = Path.GetFullPath(caminhoArquivo);
