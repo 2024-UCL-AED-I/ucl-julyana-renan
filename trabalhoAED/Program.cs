@@ -9,13 +9,34 @@ class Program
 
     static void Main(string[] args)
     {
-
-
         List<Livro> livros = new List<Livro>();
         List<Pessoa> clientes = new List<Pessoa>();
         Emprestimo emprestimo = new Emprestimo();
 
-            string opcao = "";
+        string emprestimoPath = "..\\..\\..\\bancoDeDados\\Emprestimo.txt";
+        string clientePath = ("..\\..\\..\\bancoDeDados\\Clientes.txt");
+        string livroPath = "..\\..\\..\\bancoDeDados\\Livros.txt";
+
+        if (File.Exists(livroPath))
+        {
+            string[] linhasLivros = File.ReadAllLines(livroPath);
+            foreach (string linha in linhasLivros)
+            {
+                string[] dados = linha.Split(';');
+                Livro livro = new Livro
+                {
+                    Titulo = dados[0],
+                    Autor = dados[1],
+                    Genero = dados[2],
+                    ClassificacaoIndicativa = int.Parse(dados[3])
+                };
+                livros.Add(livro);
+            }
+        }
+
+
+
+        string opcao = "";
 
             while (opcao != "0")
             {
@@ -125,5 +146,5 @@ class Program
                         break;
                 }
             }
-        }
     }
+}

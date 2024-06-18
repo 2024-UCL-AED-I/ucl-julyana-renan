@@ -12,6 +12,7 @@ class Emprestimo
     public void EmprestimoLivro(Livro livro, Pessoa cliente)
     {
 
+
         string emprestimoPath = "..\\..\\..\\bancoDeDados\\Emprestimo.txt";
         string clientePath = ( "..\\..\\..\\bancoDeDados\\Clientes.txt");
         string livroPath = "..\\..\\..\\bancoDeDados\\Livros.txt";
