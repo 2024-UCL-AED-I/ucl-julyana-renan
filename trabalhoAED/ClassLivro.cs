@@ -53,7 +53,7 @@ class Livro
         try
         {
             string linha = $"{livro.titulo};{livro.autor};{livro.genero};{livro.classificacaoIndicativa}";
-            string caminhoArquivo = "R:\\Faculdade\\trabalhoAED\\trabalhoAED\\Livros.txt";
+            string caminhoArquivo = "..\\..\\..\\bancoDeDados\\Livros.txt";
 
             // Verificar se o arquivo já existe e informar o caminho absoluto
             string caminhoAbsoluto = Path.GetFullPath(caminhoArquivo);
