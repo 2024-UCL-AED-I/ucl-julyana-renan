@@ -123,8 +123,15 @@ class Program
                     Console.WriteLine("Informe o CPF do cliente:");
                     pessoa.Cpf = Console.ReadLine();
                     clientes.Add(pessoa);
-                    Pessoa.EscreverEmArquivo(pessoa);
-                    Console.WriteLine("\nCliente Cadastrado! Pressione qualquer tecla para continuar.");
+                    if (pessoa.Cpf != null)
+                    {
+                        Pessoa.EscreverEmArquivo(pessoa);
+                        Console.WriteLine("\nCliente Cadastrado! Pressione qualquer tecla para continuar.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nErro ao Cadastrado cliente! Pressione qualquer tecla para continuar.");
+                    }
                     Console.ReadKey();
                     break;
 
