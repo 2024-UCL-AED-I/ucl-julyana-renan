@@ -9,6 +9,31 @@ class Emprestimo
     private DateTime dataEmprestimo;
     private DateTime dataDevolucao;
 
+
+    public Livro Livro
+    {
+        get { return livro; }
+        set { }
+    }
+
+    public Pessoa Cliente
+    {
+        get { return cliente; }
+        set { }
+    }
+
+    public DateTime DataEmprestimo
+    {
+        get { return dataEmprestimo; }
+        set {  }
+    }
+
+    public DateTime DataDevolucao
+    {
+        get { return dataDevolucao; }
+        set { }
+    }
+
     public void EmprestimoLivro(Livro livro, Pessoa cliente)
     {
 
@@ -156,11 +181,46 @@ class Emprestimo
         {
             // Reescrever o arquivo sem a linha do empréstimo devolvido
             File.WriteAllLines(filePath, linhas, Encoding.UTF8);
-            Console.WriteLine($"A devolução de {livro.Titulo} foi concluída com sucesso!");
+            Console.WriteLine($"A devolução foi concluída com sucesso!");
         }
         else
         {
             Console.WriteLine($"{pessoa.Nome} não possui nenhum livro alugado.");
+        }
+    }
+
+    public static void RelatorioLivrosAlugados()
+    {
+        string emprestimoPath = "..\\..\\..\\bancoDeDados\\Emprestimo.txt";
+
+        if (!File.Exists(emprestimoPath))
+        {
+            Console.WriteLine("Nenhum empréstimo registrado.");
+            return;
+        }
+
+        Console.WriteLine("Relatório de Livros Alugados:");
+
+        using (StreamReader sr = new StreamReader(emprestimoPath, Encoding.UTF8))
+        {
+            while (!sr.EndOfStream)
+            {
+                string linha = sr.ReadLine();
+                string[] dados = linha.Split(';');
+
+                string clienteNome = dados[0];
+                string clienteCpf = dados[3];
+                string livroTitulo = dados[4];
+                string dataEmprestimo = dados[8];
+                string dataDevolucao = dados[9];
+
+                Console.WriteLine($"Cliente: {clienteNome} (CPF: {clienteCpf})");
+                Console.WriteLine($"Livro: {livroTitulo}");
+                Console.WriteLine($"Data de Empréstimo: {dataEmprestimo}");
+                Console.WriteLine($"Data de Devolução: {dataDevolucao}");
+                Console.WriteLine("-------------------------------");
+            }
+            return;
         }
     }
 }

@@ -41,10 +41,12 @@ public class Pessoa
             if (ValidarCPF(value))
             {
                 cpf = value;
+               
             }
             else
             {
                 Console.WriteLine("CPF inválido.");
+                
             }
         }
     }
