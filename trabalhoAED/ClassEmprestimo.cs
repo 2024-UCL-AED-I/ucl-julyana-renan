@@ -132,7 +132,7 @@ class Emprestimo
             sw.WriteLine(linha);
 
             string caminhoArquivo = "..\\..\\..\\bancoDeDados\\Emprestimo.txt";
-            //File.AppendAllText(caminhoArquivo, linha + Environment.NewLine);
+            
         }
 
         Console.WriteLine($"Empréstimo adicionado com sucesso. O livro deve ser devolvido em {dataDevolucao}");
@@ -189,6 +189,7 @@ class Emprestimo
         }
     }
 
+    // Imprime o relatório do livros alugados
     public static void RelatorioLivrosAlugados()
     {
         string emprestimoPath = "..\\..\\..\\bancoDeDados\\Emprestimo.txt";
