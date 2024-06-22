@@ -201,9 +201,6 @@ class Program
                     Emprestimo devolveEmprestimo = new Emprestimo
                     {
                         Cliente = clientinho,
-                        //Livro = ,
-                        //DataEmprestimo = DateTime.Now,
-                        //DataDevolucao = DateTime.Now.AddDays(14) // Exemplo de 14 dias para devolução
                     };
                     devolveEmprestimo.DevolucaoLivro(clientinho);
                     Console.WriteLine("Pressione qualquer tecla para continuar.");
