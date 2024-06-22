@@ -1,3 +1,10 @@
-renan;20;16177699758;casa
-renan;20;16177699758;casa
-oi;12;03090098717;ali
+Maria;56;03998430008;9784 Avenida Xavier, Lavandeira, ES 
+Renan;20;16177699758;7210 Avenida Ladislau,Jandaia, PB
+Ju;20;15182571780;251 Rodovia Isabel, Casa Nova, SE
+Joaozinho;23168850047;761 Rua Costa, Irapuru, PR
+Filipe;25331005012;603 Rua Xavier, Gália, PR
+Andressa;93580476076;4611 Alameda Moraes, Confins, DF
+Miguel;42560976005;93730 Avenida Oliveira, Ângulo, SC
+Thalita;76097811004;9936 Alice Travessa, Porto Estrela, RJ
+Moises;67593704068;142 Avenida Moreira, Governador Newton Bello, BA
+Laura;41450496083;00118 Avenida Isabella, Iporá, TO
