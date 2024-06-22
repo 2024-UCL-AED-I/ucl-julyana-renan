@@ -1,2 +1,6 @@
-juju_ba;tia cati;romancee??;18
-biblia;Deus;Vida;0
+O Pequeno Príncipe;Antoine de Saint-Exupéry;Literatura infantojuvenil;3
+A Menina que Roubava Livros;Markus Zusak;Drama histórico;14
+Dom Casmurro;Machado de Assis;Romance;16
+A Culpa é das Estrelas;John Green;Romance;16
+1984;George Orwell;Ficção científica;16
+Steve Jobs;Walter Isaacson;Biografia;14
