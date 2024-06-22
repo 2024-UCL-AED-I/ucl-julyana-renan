@@ -71,7 +71,6 @@ public class Pessoa
 
             // Verificar se o arquivo já existe e informar o caminho absoluto
             string caminhoAbsoluto = Path.GetFullPath(caminhoArquivo);
-            //Console.WriteLine($"Escrevendo no arquivo: {caminhoAbsoluto}");
 
             // Adiciona a linha ao arquivo
             File.AppendAllText(caminhoArquivo, linha + Environment.NewLine);
@@ -82,9 +81,6 @@ public class Pessoa
             Console.WriteLine($"Erro ao escrever no arquivo: {ex.Message}");
         }
     }
-
-
-    //public string CPF { get; set; }
 
     private static bool ValidarCPF(string cpf)
     {
