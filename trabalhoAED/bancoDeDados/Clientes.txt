@@ -1,6 +1,4 @@
 Maria;56;03998430008;9784 Avenida Xavier, Lavandeira, ES 
-Renan;20;16177699758;7210 Avenida Ladislau,Jandaia, PB
-Ju;20;15182571780;251 Rodovia Isabel, Casa Nova, SE
 Joaozinho;23168850047;761 Rua Costa, Irapuru, PR
 Filipe;25331005012;603 Rua Xavier, Gália, PR
 Andressa;93580476076;4611 Alameda Moraes, Confins, DF
